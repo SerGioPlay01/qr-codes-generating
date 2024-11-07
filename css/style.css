@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url(/resources/mount-fuji-3840x2160-18794.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+.app-html {
+    background-color: rgba(139, 15, 197, 0.321);
+    backdrop-filter: blur(40px);
+    padding: 40px 40px 40px 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.275);
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24pt;
+    color: #fff;
+    border-bottom: 2px solid #ffffff;
+    padding: 10px 20px 10px 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+.tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}   
+.tabs button {
+    color: #fff;
+    padding: 10px 20px;
+    background-color: #6e0aa440;
+    backdrop-filter: blur(40px);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12pt;
+    transition: background-color 0.3s ease-in-out;
+}
+
+
+.content {
+    display: none;
+}
+
+.content.active {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 20px 20px 20px;
+    background-color: #6e0aa440;
+    backdrop-filter: blur(40px);
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+input, textarea {
+    outline: none;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #b63ceb60;
+    border-radius: 5px;
+    font-size: 12pt;
+    background-color: #6e0aa440;
+    backdrop-filter: blur(40px);
+    color: #ffffff;
+    padding-left: 10px;
+    padding-top: 10px;
+    transition: border 0.3s ease-in-out;
+}
+.res {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px 10px 20px;
+    width: 100%;
+    color: #f5f0f0;
+}
+input:focus, textarea:focus {
+    border: 1px solid #6e0aa4;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
+}
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 12pt;
+    color: #f5f0f0;
+}
+.button-generate {
+    margin-top: 5%;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: 12pt;
+    background-color: #6e0aa440;
+    backdrop-filter: blur(40px);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+.button-generate:hover {
+    background-color: #9a12e3;
+    color: #fff;
+}
+.btns {
+    display: none;
+    gap: 20px;
+}
+.button-download {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: 12pt;
+    background-color: #6e0aa440;
+    backdrop-filter: blur(40px);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+@media (hover: hover) {
+    .tabs button:hover {
+        background-color: #9a12e3;
+        color: #fff;
+    }
+    .button-generate:hover {
+        background-color: #9a12e3;
+        color: #fff;
+    }
+    .button-download:hover {
+        background-color: #9a12e3;
+        color: #fff;
+    }
+    
+}
+
+@media screen and (max-width: 600px) {
+    .app-html {
+        padding: 20px 20px 20px 20px;
+        width: 90%;
+    }
+    h1 {
+        font-size: 18pt;
+    }
+    .tabs {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
+    .tabs button {
+        font-size: 10pt;
+    }
+    .button-generate {
+        font-size: 10pt;
+    }
+    .button-download {
+        font-size: 10pt;
+    }
+    .btns {
+        flex-wrap: wrap;
+        gap: 5px;
+        justify-content: flex-start;
+    }
+    
+}
