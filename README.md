@@ -1,5 +1,7 @@
 ![](https://github.com/SerGioPlay01/qr-codes-generating/blob/main/screen.png)
 
+- [EN](https://translate.google.com/translate?sl=ru&tl=en&u=https://github.com/SerGioPlay01/qr-codes-generating)  [RU](https://translate.google.com/translate?sl=ru&tl=ru&u=https://github.com/SerGioPlay01/qr-codes-generating)
+
 # Генератор QR-кодов
 
 Простой генератор QR-кодов на чистом JavaScript с возможностью выбора типа контента: ссылка, текст, фото, соцсеть или видео. Генерированный QR-код можно скачать в формате PNG, JPG или SVG.
