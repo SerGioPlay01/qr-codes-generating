@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>QR Code Generator</title>
+</head>
+
+<body>
+    <h1>QR Code Generator</h1>
+    <div class="app-html">
+
+        <div class="tabs">
+            <button onclick="openTab('link')">Ссылка</button>
+            <button onclick="openTab('text')">Текст</button>
+            <button onclick="openTab('photo')">Фото</button>
+            <button onclick="openTab('social')">Соцсеть</button>
+            <button onclick="openTab('video')">Видео</button>
+        </div>
+
+        <div id="link" class="content active">
+            <label>Введите ссылку:</label>
+            <input autocomplete="off" type="text" id="linkInput">
+        </div>
+
+        <div id="text" class="content">
+            <label>Введите текст:</label>
+            <textarea id="textInput"></textarea>
+        </div>
+
+        <div id="photo" class="content">
+            <label>Ссылка на фото:</label>
+            <input type="text" id="photoInput">
+        </div>
+
+        <div id="social" class="content">
+            <label>Ссылка на соцсеть:</label>
+            <input type="text" id="socialInput">
+        </div>
+
+        <div id="video" class="content">
+            <label>Ссылка на видео:</label>
+            <input type="text" id="videoInput">
+        </div>
+
+        <button class="button-generate" onclick="generateQRCode()">Сгенерировать QR-код</button>
+        <div class="res">
+        <div class="qrcode" id="qrcode"></div>
+        </div>
+
+        <div class="btns">
+        <!-- Кнопки скачивания -->
+        <button class="button-download" onclick="downloadQRCode('png')">Скачать PNG</button>
+        <button class="button-download" onclick="downloadQRCode('jpg')">Скачать JPG</button>
+        </div>
+
+    </div>
+
+    <script src="/js/qrcode.min.js"></script>
+    <script src="/js/ganqr.js"></script>
+    <script src="/js/html2canvas.min.js"></script>
+    <script src="/js/downloadqr.js"></script>
+</body>
+
+</html>
